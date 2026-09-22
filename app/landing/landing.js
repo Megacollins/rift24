@@ -25,15 +25,30 @@
   }
 
   async function boot() {
+    // demo_state.js embeds the same object data/demo_state.json holds (built together by
+    // scripts/build_demo_state.py), so render from it synchronously — no network round trip,
+    // no loading flash — and only fetch if that embed is somehow missing.
     let S = null;
-    try {
-      const r = await fetch('../../data/demo_state.json', { cache: 'no-store' });
-      if (!r.ok) throw new Error(r.status);
-      S = await r.json();
-    } catch (_) {
-      S = window.RIFT24_STATE; // file:// or offline: same pre-rendered state, embedded via ../demo_state.js
+    if (window.RIFT24_STATE) {
+      S = window.RIFT24_STATE;
+    } else {
+      try {
+        const r = await fetch('../../data/demo_state.json', { cache: 'no-store' });
+        if (!r.ok) throw new Error(r.status);
+        S = await r.json();
+      } catch (_) { S = null; }
     }
-    if (!S) { $('#lverdict-word').textContent = 'demo_state.json missing'; return; }
+    if (!S) {
+      const msg = 'DATA UNAVAILABLE — could not load data/demo_state.json';
+      $('#lstatus').innerHTML = `<span class="dot"></span> ${msg}`;
+      $('#lverdict-word').textContent = 'DATA UNAVAILABLE';
+      $('#lverdict-hyp').textContent = msg;
+      $('#dn-hist-rate').textContent = 'NOT MEASURED';
+      $('#dn-hist-detail').textContent = msg;
+      $('#dn-live').textContent = 'NOT MEASURED';
+      $('#dn-live-detail').textContent = msg;
+      return;
+    }
 
     const d = S.meta.data;
     const statusLabel = d.mode === 'LIVE' ? 'LIVE MARKET DATA' : 'OFFLINE FIXTURE';

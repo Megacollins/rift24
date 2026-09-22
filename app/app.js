@@ -505,7 +505,11 @@
   const stacked = () => innerWidth <= 1380;
   const toDetail = () => { if (ui.tab === 'desk' && stacked()) { const d = $('#detail'); if (d) d.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }); } };
 
-  function setTab(t) { stopPlay(); ui.tab = t; if (t === 'replay') ui.step = 0; else delete document.body.dataset.replayStep; render(); }
+  function setTab(t) {
+    stopPlay(); ui.tab = t; if (t === 'replay') ui.step = 0; else delete document.body.dataset.replayStep;
+    history.replaceState(null, '', `#${t}`); // keep the URL in sync so a refresh lands back on the tab in view
+    render();
+  }
 
   document.addEventListener('click', (e) => {
     const tab = e.target.closest('[data-tab]'); if (tab) return setTab(tab.dataset.tab);
@@ -531,14 +535,22 @@
   });
 
   async function boot() {
-    try {
-      const r = await fetch('../data/demo_state.json', { cache: 'no-store' });
-      if (!r.ok) throw new Error(r.status);
-      S = await r.json();
-    } catch (_) {
-      S = window.RIFT24_STATE; // file:// or offline: same pre-rendered state, embedded
+    // demo_state.js embeds the same object data/demo_state.json holds (built together by
+    // scripts/build_demo_state.py), so render from it synchronously — no network round trip,
+    // no loading flash — and only fetch if that embed is somehow missing.
+    if (window.RIFT24_STATE) {
+      S = window.RIFT24_STATE;
+    } else {
+      try {
+        const r = await fetch('../data/demo_state.json', { cache: 'no-store' });
+        if (!r.ok) throw new Error(r.status);
+        S = await r.json();
+      } catch (_) { S = null; }
     }
-    if (!S) { $('#view-desk').innerHTML = '<p class="callout bad">demo_state.json missing. Run <code>python -m scripts.build_demo_state</code>.</p>'; return; }
+    if (!S) {
+      $('#view-desk').innerHTML = '<div class="callout bad"><b>DATA UNAVAILABLE</b><br>Unable to load <code>data/demo_state.json</code>. Run <code>python -m scripts.build_demo_state</code> and reload.</div>';
+      return;
+    }
     ui.lead = S.meta.selected_decision_lead_bars;
     const d = S.meta.data;
     const l1 = d.mode === 'LIVE' ? 'LIVE MARKET DATA' : 'OFFLINE FIXTURE';

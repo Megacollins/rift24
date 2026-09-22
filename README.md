@@ -72,7 +72,7 @@ prior cash close ── rToken trades through the void ── DECISION ── en
 
 Stances: **FADE** (trade against the void move: over-priced), **ADD** (join it: under-priced), **FLATTEN** (the pre-open exit), **DO NOTHING**. The pre-specified rule only ever produces FADE; the exploratory two-sided variant may also ADD.
 
-Baselines: **A** DO NOTHING, **B** ALWAYS FADE (gates 1, 2, 3, 8 only). Rift24 beats B only by standing down: it earns 0 where always-fade loses, because there is no positive-return fade to gate. It does not find a profitable trade here and does not pretend to — that is reported rather than hidden.
+Baselines: **A** DO NOTHING, **B** ALWAYS FADE (gates 1, 2, 3, 8 only). Rift24's return exceeds B's only because it stands down: it earns 0 where always-fade loses, since there is no positive-return fade to gate. It does not find a profitable trade here and does not claim to — that is reported rather than hidden.
 
 ## How to run — fully offline
 
