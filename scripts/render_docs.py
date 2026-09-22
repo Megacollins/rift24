@@ -171,6 +171,7 @@ Labels: **OBSERVED** = read from exchange / cash data · **ESTIMATED** = depends
 ## 5. Deliverables
 
 - **Live demo:** https://rift24.vercel.app (landing page → desk / backtest / weekend replay; static, reads the same frozen fixture as the local build).
+- **Source:** https://github.com/Megacollins/rift24
 - Strategy code: `rift24/` (`calendar.py`, `data.py`, `residual.py`, `backtest.py`, `metrics.py`, `events.py`, `report.py`, `thesis.py`, `demo.py`).
 - Backtest: `python -m scripts.run_backtest` → `reports/backtest.json`.
 - Demo: `bash scripts/serve.sh` → `app/` (Desk · Backtest · Weekend replay); pre-rendered `data/demo_state.json`.

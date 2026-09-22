@@ -6,7 +6,7 @@ It measures how much overnight information is already priced into 24/7 [Bitget r
 
 > **Paper/backtest only. No live-money trading.** No API keys are needed or used; the code cannot place an order.
 
-**Live demo:** [rift24.vercel.app](https://rift24.vercel.app) — static build reading the same frozen fixture as `bash scripts/serve.sh` below.
+**Live demo:** [rift24.vercel.app](https://rift24.vercel.app) — static build reading the same frozen fixture as `bash scripts/serve.sh` below. **Source:** [github.com/Megacollins/rift24](https://github.com/Megacollins/rift24).
 
 - **Track:** Alpha Factory — Quantitative Strategies
 - **Sub-theme:** After-Hours Information Pricing
