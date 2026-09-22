@@ -1,0 +1,2 @@
+tzdata>=2024.1        # IANA zone data for zoneinfo (needed on Windows)
+pytest>=8.0           # tests only

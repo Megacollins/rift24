@@ -1,0 +1,9 @@
+{
+  "framework": null,
+  "buildCommand": null,
+  "installCommand": null,
+  "outputDirectory": ".",
+  "redirects": [
+    { "source": "/", "destination": "/app/landing/", "permanent": false }
+  ]
+}

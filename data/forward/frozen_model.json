@@ -1,0 +1,27 @@
+{
+  "rule": "RIFT24_RESIDUAL",
+  "decision_lead_bars": 22,
+  "beta": 1.1620745064181,
+  "se": 0.03357080003749788,
+  "n": 499,
+  "fitted_through_session": "2026-09-21",
+  "config": {
+    "rt_cost_bps": 8.0,
+    "spread_fallback_bps": 4.0,
+    "slippage_bps": 0.0,
+    "min_move_cost_multiple": 2.0,
+    "edge_cost_multiple": 2.0,
+    "min_train_obs": 30,
+    "min_tstat": 1.645,
+    "min_tstat_two_sided": 1.96,
+    "stale_minutes": 15,
+    "max_name_pct": 0.2,
+    "max_gross_pct": 1.0,
+    "decision_lead_bars": 22,
+    "exit_after_open_bars": 0,
+    "max_carry_bars": 4,
+    "burn_in_days": 7
+  },
+  "sha256": "669cb43ce77750183c9ce0a915a7a9d25924c721e60133690ce59b6e74039eeb",
+  "note": "Fitted once on the fixtures. Never refit on forward data. Changing any field is a new registered version."
+}

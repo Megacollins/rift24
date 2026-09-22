@@ -1,0 +1,157 @@
+{
+  "_meta": {
+    "purpose": "Gate 2 allow-list: the only instruments Rift24 will ever produce a non-DO-NOTHING stance for.",
+    "naming_verified": "Bitget public REST GET /api/v2/spot/public/symbols on 2026-09-21: every entry below returned status=online, quoteCoin=USDT, baseCoin='r<TICKER>'. Bitget's own docs describe rTokens as 'r + stock ticker'; the API spot symbol is upper-cased (e.g. RNVDAUSDT).",
+    "listing_note": "listing_date comes from the exchange's openTime field. Sessions in the first 7 calendar days after listing are treated as burn-in (price discovery) and never scored.",
+    "taker_fee_rate_observed": 0.001,
+    "taker_fee_rate_note": "OBSERVED spot takerFeeRate is 10 bps per side (20 bps round trip). The task-mandated default haircut is 8 bps round trip and is kept as the base case; 20 bps round trip is run as a sensitivity.",
+    "max_single_name_notional_pct_of_book": 20,
+    "alias_note": "Aliases feed the rule-based event mapper (rift24/events.py). Ambiguous words (e.g. 'prime', 'ios', bare 'nasdaq' which appears in every 'NASDAQ:XYZ' ticker tag) are deliberately excluded. Macro terms map to rSPY/rQQQ in events.py, not here."
+  },
+  "instruments": [
+    {
+      "rtoken": "rNVDA",
+      "bitget_symbol": "RNVDAUSDT",
+      "underlying": "NVDA",
+      "kind": "stock",
+      "listing_date": "2026-04-23",
+      "aliases": [
+        "nvidia",
+        "nvda",
+        "jensen huang",
+        "data-center",
+        "data center",
+        "blackwell",
+        "cuda"
+      ]
+    },
+    {
+      "rtoken": "rTSLA",
+      "bitget_symbol": "RTSLAUSDT",
+      "underlying": "TSLA",
+      "kind": "stock",
+      "listing_date": "2026-06-01",
+      "aliases": [
+        "tesla",
+        "tsla",
+        "elon musk",
+        "robotaxi",
+        "cybertruck",
+        "model y"
+      ]
+    },
+    {
+      "rtoken": "rQQQ",
+      "bitget_symbol": "RQQQUSDT",
+      "underlying": "QQQ",
+      "kind": "etf",
+      "listing_date": "2026-06-01",
+      "aliases": [
+        "qqq",
+        "nasdaq 100",
+        "nasdaq-100"
+      ]
+    },
+    {
+      "rtoken": "rSPY",
+      "bitget_symbol": "RSPYUSDT",
+      "underlying": "SPY",
+      "kind": "etf",
+      "listing_date": "2026-06-01",
+      "aliases": [
+        "spy",
+        "s&p 500",
+        "s&p500",
+        "sp500"
+      ]
+    },
+    {
+      "rtoken": "rMETA",
+      "bitget_symbol": "RMETAUSDT",
+      "underlying": "META",
+      "kind": "stock",
+      "listing_date": "2026-06-01",
+      "aliases": [
+        "meta platforms",
+        "meta",
+        "facebook",
+        "instagram",
+        "whatsapp",
+        "zuckerberg"
+      ]
+    },
+    {
+      "rtoken": "rAAPL",
+      "bitget_symbol": "RAAPLUSDT",
+      "underlying": "AAPL",
+      "kind": "stock",
+      "listing_date": "2026-06-01",
+      "aliases": [
+        "apple",
+        "aapl",
+        "iphone",
+        "tim cook",
+        "app store"
+      ]
+    },
+    {
+      "rtoken": "rMSFT",
+      "bitget_symbol": "RMSFTUSDT",
+      "underlying": "MSFT",
+      "kind": "stock",
+      "listing_date": "2026-06-01",
+      "aliases": [
+        "microsoft",
+        "msft",
+        "azure",
+        "satya nadella",
+        "copilot",
+        "openai partnership"
+      ]
+    },
+    {
+      "rtoken": "rAMZN",
+      "bitget_symbol": "RAMZNUSDT",
+      "underlying": "AMZN",
+      "kind": "stock",
+      "listing_date": "2026-06-01",
+      "aliases": [
+        "amazon",
+        "amzn",
+        "aws",
+        "andy jassy"
+      ]
+    },
+    {
+      "rtoken": "rGOOGL",
+      "bitget_symbol": "RGOOGLUSDT",
+      "underlying": "GOOGL",
+      "kind": "stock",
+      "listing_date": "2026-06-01",
+      "aliases": [
+        "alphabet",
+        "google",
+        "googl",
+        "gemini",
+        "youtube",
+        "waymo",
+        "sundar pichai"
+      ]
+    },
+    {
+      "rtoken": "rAMD",
+      "bitget_symbol": "RAMDUSDT",
+      "underlying": "AMD",
+      "kind": "stock",
+      "listing_date": "2026-06-02",
+      "aliases": [
+        "amd",
+        "advanced micro devices",
+        "lisa su",
+        "instinct",
+        "epyc",
+        "ryzen"
+      ]
+    }
+  ]
+}

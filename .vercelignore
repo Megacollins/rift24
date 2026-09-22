@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.ipynb_checkpoints/
+reports/live_smoke/
+tests/
+notebooks/

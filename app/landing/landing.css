@@ -1,0 +1,168 @@
+/* Rift24 landing page — components on top of the shared tokens in ../styles.css (same design system, no duplication). */
+
+body { overflow-x: hidden; }
+.lnav { display: flex; align-items: center; gap: 18px; padding: 14px 24px; border-bottom: 1px solid transparent; background: rgba(10, 15, 22, 0.5); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 5; flex-wrap: wrap; transition: background 200ms var(--ease), border-color 200ms var(--ease); }
+.lnav.scrolled { background: rgba(10, 15, 22, 0.86); border-bottom-color: var(--line); }
+.lnav .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+.lnav .mark { color: var(--cyan); display: inline-flex; }
+.lnav .wordmark { font-size: 17px; font-weight: 680; letter-spacing: -0.01em; display: inline-flex; align-items: baseline; gap: 1px; }
+.lnav .wordmark .rf { color: var(--text); }
+.lnav .wordmark .yr { color: var(--cyan); font-weight: 560; }
+.lnavlinks { display: flex; gap: 22px; margin-left: 10px; }
+.lnavlinks a { font-size: 13px; color: var(--text-dim); text-decoration: none; transition: color 150ms var(--ease); }
+.lnavlinks a:hover { color: var(--text); }
+.lnav .cta { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+.lnav .cta .lbtn { padding: 9px 16px; font-size: 13.5px; }
+
+.lwrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.lsection { padding: 46px 0; border-top: 1px solid var(--line); }
+.lsection:first-of-type { border-top: 0; }
+.leyebrow { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); font-weight: 700; margin-bottom: 9px; }
+.lh1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; color: var(--text); margin: 0 0 14px; max-width: 18ch; }
+.lh1 .dim { color: var(--text-dim); }
+.llede { font-size: 16px; line-height: 1.55; color: var(--text-dim); max-width: 60ch; margin: 0 0 20px; }
+.lh2 { font-size: 22px; font-weight: 660; letter-spacing: -0.01em; color: var(--text); margin: 0 0 8px; }
+.lsub { font-size: 13.5px; color: var(--text-dim); max-width: 68ch; margin: 0 0 20px; line-height: 1.55; }
+
+.lbtn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 8px; font-weight: 620; font-size: 14.5px; text-decoration: none; transition: transform 150ms var(--ease), background 150ms var(--ease), border-color 150ms var(--ease); border: 1px solid transparent; }
+.lbtn.primary { background: var(--cyan); color: #06181a; }
+.lbtn.primary:hover { background: #4fe0e8; transform: translateY(-1px); }
+.lbtn.ghost { border-color: var(--line-2); color: var(--text); background: var(--surface-1); }
+.lbtn.ghost:hover { border-color: var(--line-3); background: var(--surface-2); }
+.lctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+
+.lhero { padding: 40px 0 0; position: relative; }
+.lhero .lstatus { display: inline-flex; align-items: center; gap: 9px; padding: 5px 12px 5px 10px; border: 1px solid var(--line-2); border-radius: 20px; background: var(--surface-2); font-size: 12px; color: var(--text-dim); margin-bottom: 12px; }
+.lhero .lstatus .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--amber); }
+.lhero .lstatus .dot.green { background: var(--green); }
+
+.lsteps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.lstep { background: var(--surface-1); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); padding: 16px 18px 18px; position: relative; }
+.lstep .n { font-family: var(--mono); font-size: 11.5px; color: var(--cyan); font-weight: 700; margin-bottom: 8px; }
+.lstep h3 { font-size: 14.5px; color: var(--text); margin-bottom: 6px; letter-spacing: -0.005em; }
+.lstep p { font-size: 12.5px; color: var(--text-dim); line-height: 1.55; margin: 0; }
+
+/* how it works — 4 step */
+.lhow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.lhstep { padding: 4px 0 0; border-top: 2px solid var(--line-2); }
+.lhstep .n { font-family: var(--mono); font-size: 11px; color: var(--text-faint); margin: 10px 0 4px; }
+.lhstep .t { font-size: 14.5px; font-weight: 650; color: var(--text); margin-bottom: 6px; }
+.lhstep:last-child { border-top-color: var(--cyan); }
+.lhstep:last-child .n { color: var(--cyan); }
+.lhstep p { font-size: 12.5px; color: var(--text-dim); line-height: 1.55; margin: 0; }
+.lhstep p b { color: var(--text); }
+
+/* hero rift visual */
+.lriftvisual { position: relative; margin-top: 34px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); height: 180px; background: var(--surface-1); }
+.lrv-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.lrv-left { fill: rgba(255,255,255,0.02); }
+.lrv-right { fill: var(--cyan-bg); }
+.lrv-seam { stroke: var(--line-3); stroke-width: 1; }
+.lrv-seam-b { stroke: var(--cyan-line); }
+.lrv-pane { position: absolute; top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; padding: 0 26px; }
+.lrv-pane-l { left: 0; width: 40%; align-items: flex-start; }
+.lrv-pane-r { right: 0; width: 40%; align-items: flex-end; text-align: right; }
+.lrv-k { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 6px; }
+.lrv-v { font-family: var(--mono); font-size: 17px; font-weight: 650; color: var(--text-dim); }
+.lrv-v.closed { color: var(--red); }
+.lrv-v.open { color: var(--green); }
+.lrv-tick { width: 26px; height: 2px; background: var(--line-3); margin-top: 12px; }
+.lrv-tape { display: flex; align-items: flex-end; gap: 4px; margin-top: 14px; height: 16px; }
+.lrv-tape span { width: 2px; background: var(--cyan); opacity: 0.5; animation: lrvfade 5s ease-in-out infinite; }
+.lrv-tape span:nth-child(1) { height: 7px; animation-delay: 0s; } .lrv-tape span:nth-child(2) { height: 12px; animation-delay: 0.5s; }
+.lrv-tape span:nth-child(3) { height: 9px; animation-delay: 1s; } .lrv-tape span:nth-child(4) { height: 16px; animation-delay: 1.5s; }
+.lrv-tape span:nth-child(5) { height: 10px; animation-delay: 2s; } .lrv-tape span:nth-child(6) { height: 13px; animation-delay: 2.5s; }
+@keyframes lrvfade { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.85; } }
+@media (prefers-reduced-motion: reduce) { .lrv-tape span { animation: none; opacity: 0.6; } }
+
+/* DO NOTHING signature section */
+.lnothing { text-align: center; padding: 50px 0; }
+.ldn-head { font-size: clamp(26px, 4.4vw, 46px); line-height: 1.12; font-weight: 700; letter-spacing: -0.02em; color: var(--text-dim); }
+.ldn-word { font-family: var(--mono); font-size: clamp(30px, 5.6vw, 58px); font-weight: 700; letter-spacing: -0.01em; color: var(--cyan); margin-top: 6px; }
+.lnothing .lsub { margin-left: auto; margin-right: auto; text-align: center; }
+.ldn-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; max-width: 620px; margin: 0 auto; }
+.ldn-stat { background: var(--surface-1); padding: 17px 20px; }
+.ldn-stat .v { font-family: var(--mono); font-size: 30px; font-weight: 700; color: var(--text); }
+.ldn-stat .k { font-size: 11px; color: var(--text-faint); margin-top: 8px; line-height: 1.5; }
+.ldn-stat .k .lab { margin-left: 4px; }
+.ldn-stat .sub { font-size: 11.5px; color: var(--text-dim); margin-top: 4px; }
+
+/* product preview — the iframe is the real desk; its own nav + disclaimer bar (~98px) is
+   cropped out here since the landing nav already covers wayfinding, so only the live product
+   content shows, not a second stacked header. */
+.lpreview { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); background: var(--surface-1); height: 480px; }
+.lpreview-frame { display: block; width: 100%; height: 578px; margin-top: -98px; border: 0; background: var(--bg); pointer-events: none; }
+
+.lverdict { border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface-1); box-shadow: var(--shadow); padding: 20px 22px; }
+.lverdict .top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.lverdict .word { font-size: 23px; font-weight: 720; letter-spacing: -0.01em; color: var(--red); }
+.lverdict .hyp { font-size: 13px; color: var(--text-dim); line-height: 1.55; margin: 8px 0 16px; max-width: 70ch; }
+.lverdict .tablewrap { margin: 0 0 4px; }
+.lverdict table { font-size: 12.5px; }
+.lfoot-note { margin-top: 13px; font-size: 12px; color: var(--text-dim); line-height: 1.55; }
+.lfoot-note + .lfoot-note { margin-top: 6px; }
+
+.lgrid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.lcard { background: var(--surface-1); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); padding: 16px 18px; }
+.lcard h3 { font-size: 13.5px; color: var(--text); margin-bottom: 8px; }
+.lcard p, .lcard li { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+.lcard ul { margin: 0; padding-left: 18px; }
+.lcard ul li { margin: 3px 0; }
+
+.ltickers { display: flex; flex-wrap: wrap; gap: 8px; }
+.lticker { font-family: var(--mono); font-size: 12.5px; padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 7px; color: var(--text-dim); background: var(--surface-1); }
+
+/* weekend replay timeline */
+.lreplaytl { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.lrt-step { background: var(--surface-1); border: 1px solid var(--line); border-radius: 8px; padding: 10px 13px; font-size: 12px; color: var(--text-dim); min-width: 86px; }
+.lrt-step span { display: block; font-family: var(--mono); font-size: 10px; color: var(--text-faint); margin-bottom: 4px; letter-spacing: 0.04em; }
+.lrt-step.accent { border-color: var(--cyan-line); background: var(--cyan-bg); color: var(--text); }
+.lrt-step.accent span { color: var(--cyan); }
+.lrt-arrow { color: var(--text-faint); font-size: 13px; }
+
+.llegend { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 2px; }
+.llegend .item { display: flex; align-items: flex-start; gap: 10px; max-width: 320px; }
+.llegend .item p { font-size: 12.5px; color: var(--text-dim); margin: 4px 0 0; line-height: 1.5; }
+
+.lfinal { text-align: center; padding: 50px 0 46px; }
+.lfinal .lctas { justify-content: center; }
+
+.lfoot { border-top: 1px solid var(--line); padding: 26px 0 22px; }
+.lfoot-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+.lfoot-brand .wordmark { font-size: 15px; font-weight: 680; }
+.lfoot-brand .wordmark .rf { color: var(--text); } .lfoot-brand .wordmark .yr { color: var(--cyan); font-weight: 560; }
+.lfoot-brand p { font-size: 12px; color: var(--text-faint); margin: 6px 0 0; }
+.lfoot .bitget { color: var(--text-faint); font-size: 12px; display: block; padding-top: 14px; border-top: 1px solid var(--line); }
+.lfoot .bitget b { color: var(--text-dim); font-weight: 600; }
+.lfoot .links { display: flex; gap: 16px; font-size: 12.5px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .lgrid2 { grid-template-columns: 1fr; }
+  .lsteps { grid-template-columns: 1fr; }
+  .lhow { grid-template-columns: 1fr 1fr; }
+  .ldn-stats { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .lnavlinks { display: none; }
+  .lriftvisual { height: auto; padding: 22px 0; }
+  .lrv-bg { display: none; }
+  .lrv-pane { position: static; width: 100%; padding: 10px 18px; align-items: flex-start; text-align: left; }
+  .lrv-pane-r { align-items: flex-start; text-align: left; border-top: 1px solid var(--line); margin-top: 4px; padding-top: 16px; }
+}
+@media (max-width: 600px) {
+  .lwrap { padding: 0 16px; }
+  .lsection { padding: 44px 0; }
+  .lnav { padding: 10px 14px; }
+  .lnav .cta .lbtn { padding: 8px 12px; font-size: 12.5px; }
+  .lhow { grid-template-columns: 1fr; }
+  .lverdict { padding: 20px; }
+  .lfoot .lwrap { flex-direction: column; }
+  .lfoot-top { flex-direction: column; }
+}
+/* the desk's own top bar wraps to multiple lines below ~760px of iframe width (landing viewport
+   ~810px, once .lwrap padding/border are subtracted) — crop deeper here so no wrapped-nav text
+   ever peeks over the top edge of the preview. */
+@media (max-width: 830px) {
+  .lpreview { height: 380px; }
+  .lpreview-frame { height: 615px; margin-top: -235px; }
+}

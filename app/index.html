@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rift24 — what the 24/7 rToken market hasn't priced yet</title>
+  <meta name="description" content="Rift24 measures how much overnight information is already priced into 24/7 rTokens before the U.S. cash market opens — and only acts when meaningful residual remains after costs. Paper/backtest only.">
+  <meta name="theme-color" content="#05080c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2305080c'/%3E%3Cpath d='M4 5 L15 5 L11 27 L0 27 Z' fill='%233a4656'/%3E%3Cpath d='M19 8 L28 8 L24 29 L15 29 Z' fill='%2333d6e0'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="riftbg" aria-hidden="true"></div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top" role="banner">
+    <a class="brand" href="landing/index.html" aria-label="Rift24 — back to landing page" style="text-decoration:none;color:inherit">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="24" height="24" role="img" aria-label="Rift24 mark">
+          <path d="M4 5 L15 5 L11 27 L0 27 Z" fill="currentColor" opacity="0.34"/>
+          <path d="M19 8 L28 8 L24 29 L15 29 Z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="wordmark"><span class="rf">Rift</span><span class="yr">24</span></span>
+      <span class="tag">price the void</span>
+    </a>
+    <nav class="tabs" role="tablist" aria-label="Views">
+      <button role="tab" id="tab-desk" aria-controls="view-desk" aria-selected="true" data-tab="desk">Desk</button>
+      <button role="tab" id="tab-backtest" aria-controls="view-backtest" aria-selected="false" data-tab="backtest" tabindex="-1">Backtest</button>
+      <button role="tab" id="tab-replay" aria-controls="view-replay" aria-selected="false" data-tab="replay" tabindex="-1">Weekend Replay</button>
+    </nav>
+    <div class="statuspill" id="datastatus" role="status" aria-live="polite"></div>
+  </header>
+
+  <div class="paper" role="note">Paper / backtest only. No live-money trading. Every figure is labelled <b class="lab lab-obs">OBSERVED</b> <b class="lab lab-est">ESTIMATED</b> or <b class="lab lab-tgt">TARGETED</b>.</div>
+
+  <main id="main" tabindex="-1">
+    <section id="view-desk" class="view" role="tabpanel" aria-labelledby="tab-desk"></section>
+    <section id="view-backtest" class="view" role="tabpanel" aria-labelledby="tab-backtest" hidden></section>
+    <section id="view-replay" class="view" role="tabpanel" aria-labelledby="tab-replay" hidden></section>
+  </main>
+
+  <footer class="foot">
+    <span class="bitget">Built for <b>Bitget</b> — Alpha Factory · After-Hours Information Pricing</span>
+    <span><a href="../reports/backtest.json" download>reports/backtest.json</a> · <a href="thesis/">reports/thesis.md</a></span>
+  </footer>
+
+  <noscript><p style="padding:24px">Rift24's desk is a static page that needs JavaScript to render the pre-computed state in <code>data/demo_state.json</code>.</p></noscript>
+  <script src="demo_state.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

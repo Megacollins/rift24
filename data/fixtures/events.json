@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "note": "Event-board fixtures. SOURCED items were located by web search on 2026-09-21 and the pages were fetched and read the same day; 'summary' is our own short paraphrase, not quoted text. ILLUSTRATIVE items are made up to exercise the mapper offline and are NOT news. No item here is claimed to be the cause of any price move, and article publication times relative to the 04:00 ET decision were not verified.",
+    "bitget_signal": "TARGETED - the live Bitget Signal / news-briefing feed is not wired in this build; the board is fixture-driven offline."
+  },
+  "events": [
+    {
+      "id": "src-macro-0921",
+      "headline": "US Stock Market Prediction: Dow Jones Futures Rise, S&P 500 Futures Gain & Nasdaq Futures Point Higher Ahead of Wall Street Opening",
+      "source": "The Sunday Guardian - Monday Sep 21 2026 pre-market outlook",
+      "url": "https://sundayguardianlive.com/business/us-stock-market-prediction-dow-jones-futures-rise-sp-500-futures-gain-nasdaq-futures-point-higher-ahead-of-wall-street-opening-check-monday-market-outlook-key-things-to-watch-21-09-2026-288372/",
+      "provenance": "SOURCED",
+      "summary": "US equity futures pointed higher into Monday's open, with oil prices, Treasury yields and Federal Reserve policy the themes to watch.",
+      "published_note": "Monday Sep 21 pre-market"
+    },
+    {
+      "id": "src-amd-0921",
+      "headline": "AMD Stock Opens the Door for $700 as Chip Demand Drives Fresh Record Highs",
+      "source": "FX Leaders - Sep 21 2026",
+      "url": "https://www.fxleaders.com/news/2026/09/21/amd-stock-opens-the-door-for-700-as-chip-demand-drives-fresh-record-highs/",
+      "provenance": "SOURCED",
+      "summary": "AMD pushed above $600 to a record on a broad semiconductor recovery, with lower crude and Treasury yields helping risk appetite; analyst ratings were reiterated.",
+      "published_note": "Monday Sep 21 (regular session)"
+    },
+    {
+      "id": "src-meta-0921",
+      "headline": "Meta Platforms Inc Stock (META) Opened Up by 6.23% on Sep 21: What Investors Need To Know",
+      "source": "TradingKey - Sep 21 2026",
+      "url": "https://www.tradingkey.com/news/market-movers/262178436-market-movers-meta-20260921",
+      "provenance": "SOURCED",
+      "summary": "Meta rose into the open on anticipation of its Meta Connect event on Sep 23-24, where AI and hardware announcements are expected.",
+      "published_note": "Monday Sep 21 (after the open)"
+    },
+    {
+      "id": "ill-nvda",
+      "headline": "NVIDIA announces stronger-than-expected data-center demand",
+      "source": "ILLUSTRATIVE FIXTURE (not real news)",
+      "url": null,
+      "provenance": "ILLUSTRATIVE",
+      "summary": "Used to show the mapper resolving a company-specific headline to rNVDA.",
+      "published_note": "n/a"
+    },
+    {
+      "id": "ill-none",
+      "headline": "Regional bakery chain wins national award for sourdough",
+      "source": "ILLUSTRATIVE FIXTURE (not real news)",
+      "url": null,
+      "provenance": "ILLUSTRATIVE",
+      "summary": "Used to show a headline with no allow-listed ticker producing no stance.",
+      "published_note": "n/a"
+    }
+  ]
+}

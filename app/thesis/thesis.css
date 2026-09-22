@@ -1,0 +1,33 @@
+/* Rift24 thesis viewer — markdown typography on top of the shared tokens in ../styles.css
+   and the landing chrome in ../landing/landing.css (same design system, no duplication). */
+
+.tcontent { max-width: 760px; }
+.tcontent h1 { font-size: clamp(24px, 3.4vw, 32px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; color: var(--text); margin: 2px 0 18px; }
+.tcontent h2 { font-size: 19px; font-weight: 660; letter-spacing: -0.01em; color: var(--text); margin: 38px 0 12px; padding-top: 20px; border-top: 1px solid var(--line); }
+.tcontent h2:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+.tcontent h3 { font-size: 14.5px; font-weight: 640; color: var(--text); margin: 20px 0 8px; }
+.tcontent p { font-size: 13.5px; line-height: 1.65; color: var(--text-dim); margin: 0 0 14px; }
+.tcontent strong { color: var(--text); font-weight: 650; }
+.tcontent em { color: var(--text-dim); font-style: italic; }
+.tcontent code { font-family: var(--mono); font-size: 12px; background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 4px; padding: 1px 5px; color: var(--cyan); }
+
+.tcontent blockquote.tquote { border-left: 3px solid var(--cyan); background: var(--cyan-bg); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 0 0 20px; font-size: 13px; line-height: 1.6; color: var(--text-dim); }
+.tcontent blockquote.tquote strong { color: var(--text); }
+.tcontent blockquote.tquote code { background: rgba(255,255,255,0.06); }
+
+.tcontent pre.tcode { background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; overflow-x: auto; margin: 0 0 18px; }
+.tcontent pre.tcode code { background: none; border: 0; padding: 0; color: var(--text-dim); font-size: 12px; line-height: 1.6; }
+
+.tcontent ul.tlist, .tcontent ol.tlist { margin: 0 0 16px; padding-left: 20px; }
+.tcontent ol.tlist { padding-left: 22px; }
+.tcontent ul.tlist li, .tcontent ol.tlist li { font-size: 13.5px; line-height: 1.6; color: var(--text-dim); margin: 6px 0; }
+.tcontent ul.tlist li strong, .tcontent ol.tlist li strong { color: var(--text); }
+
+.tcontent .tablewrap { margin: 0 0 20px; border: 1px solid var(--line); border-radius: 9px; overflow-x: auto; }
+.tcontent .tablewrap table { min-width: 640px; }
+.tcontent .tablewrap table th, .tcontent .tablewrap table td { font-size: 12px; white-space: normal; }
+.tcontent .tablewrap table code { font-size: 11px; }
+
+@media (max-width: 600px) {
+  .tcontent h2 { margin: 30px 0 10px; padding-top: 16px; }
+}

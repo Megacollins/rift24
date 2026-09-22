@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rift24 — price the void</title>
+  <meta name="description" content="Rift24 measures how much overnight information is already priced into 24/7 rTokens before the U.S. cash market opens — and only acts when meaningful residual remains after costs. Paper/backtest only.">
+  <meta name="theme-color" content="#05080c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2305080c'/%3E%3Cpath d='M4 5 L15 5 L11 27 L0 27 Z' fill='%233a4656'/%3E%3Cpath d='M19 8 L28 8 L24 29 L15 29 Z' fill='%2333d6e0'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <div class="riftbg" aria-hidden="true"></div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <nav class="lnav" id="lnav" aria-label="Primary">
+    <a class="brand" href="index.html">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="24" height="24" role="img" aria-label="Rift24 mark">
+          <path d="M4 5 L15 5 L11 27 L0 27 Z" fill="currentColor" opacity="0.34"/>
+          <path d="M19 8 L28 8 L24 29 L15 29 Z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="wordmark"><span class="rf">Rift</span><span class="yr">24</span></span>
+    </a>
+    <div class="lnavlinks">
+      <a href="#how">How it works</a>
+      <a href="#research">Research</a>
+      <a href="#replay">Replay</a>
+    </div>
+    <div class="cta">
+      <a class="lbtn primary" href="../index.html">Open Desk →</a>
+    </div>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <section class="lhero">
+      <div class="lwrap">
+        <div class="lstatus" id="lstatus" role="status" aria-live="polite"><span class="dot"></span> Loading data status…</div>
+        <div class="leyebrow">Alpha Factory · After-Hours Information Pricing · Bitget AI Base Camp Hackathon S2</div>
+        <h1 class="lh1">The market never closes.<br><span class="dim">But the U.S. cash market does.</span></h1>
+        <p class="llede">Rift24 monitors the 24/7 rToken market through the cash-market void, measures how much of the eventual move already appears priced, and only acts when a residual survives cost. Paper / backtest only. No live-money trading.</p>
+        <div class="lctas">
+          <a class="lbtn primary" href="../index.html">Open Rift24 Desk →</a>
+          <a class="lbtn ghost" href="#research">Read the research</a>
+        </div>
+
+        <div class="lriftvisual" aria-hidden="true">
+          <svg class="lrv-bg" viewBox="0 0 800 220" preserveAspectRatio="none">
+            <polygon points="0,0 372,0 336,220 0,220" class="lrv-left"/>
+            <polygon points="428,0 800,0 800,220 392,220" class="lrv-right"/>
+            <line x1="372" y1="0" x2="336" y2="220" class="lrv-seam lrv-seam-a"/>
+            <line x1="400" y1="0" x2="364" y2="220" class="lrv-seam lrv-seam-b"/>
+            <line x1="428" y1="0" x2="392" y2="220" class="lrv-seam lrv-seam-c"/>
+          </svg>
+          <div class="lrv-pane lrv-pane-l">
+            <div class="lrv-k">U.S. cash market</div>
+            <div class="lrv-v" id="lrv-cash-v">CLOSED</div>
+            <div class="lrv-tick"></div>
+          </div>
+          <div class="lrv-pane lrv-pane-r">
+            <div class="lrv-k">rTokens</div>
+            <div class="lrv-v open">TRADING 24/7</div>
+            <div class="lrv-tape"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lsection" id="void">
+      <div class="lwrap">
+        <div class="leyebrow">The void isn't empty</div>
+        <h2 class="lh2">When cash closes, information doesn't.</h2>
+        <p class="lsub">Bitget's rTokens — tokenized, 1:1-backed versions of U.S. stocks — trade 24 / 7. In the gap between one cash close and the next cash open, news can arrive and move the rToken before the cash market has printed anything at all.</p>
+        <div class="lsteps">
+          <div class="lstep"><div class="n">01</div><h3>Cash close</h3><p>16:00 ET (13:00 on early closes). The U.S. regular session ends and prints nothing more until the next open.</p></div>
+          <div class="lstep"><div class="n">02</div><h3>The void</h3><p>News and market information keep arriving. rNVDA, rTSLA, rQQQ and the rest of the allow-list keep printing 24 / 7 on Bitget.</p></div>
+          <div class="lstep"><div class="n">03</div><h3>Cash open</h3><p>09:30 ET. The traditional market reopens, and Rift24 can compare what the rToken had already priced against what actually happened.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lsection" id="how">
+      <div class="lwrap">
+        <div class="leyebrow">How Rift24 works</div>
+        <h2 class="lh2">Price the void.</h2>
+        <p class="lsub">A deterministic, gated engine — no discretion, no news feed to interpret, nothing to believe.</p>
+        <div class="lhow">
+          <div class="lhstep"><div class="n">01</div><div class="t">Observe</div><p>Capture the rToken's move during the cash-market closure — the void move, measured directly from the tape.</p></div>
+          <div class="lhstep"><div class="n">02</div><div class="t">Map</div><p>Map the move to its allow-listed rToken only. No ad-hoc tickers, no discretionary universe.</p></div>
+          <div class="lhstep"><div class="n">03</div><div class="t">Measure</div><p>Estimate what portion of the eventual cash-market gap already appears reflected in the void move, net of cost.</p></div>
+          <div class="lhstep"><div class="n">04</div><div class="t">Stand down</div><p>If the residual doesn't clear 2× cost with statistical support from past sessions: <b>DO NOTHING</b>.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lsection lnothing">
+      <div class="lwrap">
+        <div class="ldn-head">INTELLIGENCE ISN'T<br>ALWAYS AN ACTION.</div>
+        <div class="ldn-word">DO NOTHING</div>
+        <p class="lsub" style="max-width:56ch;margin:12px 0 22px">When the void move is already priced and no edge survives cost, Rift24 does not manufacture a trade. It stands down — and stand-downs count in every metric, not just the trades.</p>
+        <div class="ldn-stats">
+          <div class="ldn-stat">
+            <div class="v" id="dn-hist-rate">—</div>
+            <div class="k">Stand-down rate, full backtest <span class="lab lab-obs">OBSERVED</span></div>
+            <div class="sub" id="dn-hist-detail">— of — symbol-sessions</div>
+          </div>
+          <div class="ldn-stat">
+            <div class="v" id="dn-live">—</div>
+            <div class="k">Right now, pre-specified 09:15 ET decision <span class="lab lab-obs">OBSERVED</span></div>
+            <div class="sub" id="dn-live-detail">names cross the residual + cost gate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lsection" id="preview">
+      <div class="lwrap">
+        <div class="leyebrow">The Rift24 desk</div>
+        <h2 class="lh2">This isn't a mockup.</h2>
+        <p class="lsub">The panel below is the real, running Rift24 desk — cash-market status, rToken status, the residual table and its DO NOTHING state, every figure labelled OBSERVED / ESTIMATED / TARGETED.</p>
+        <div class="lpreview">
+          <iframe class="lpreview-frame" src="../index.html" title="Rift24 desk — live preview" loading="lazy"></iframe>
+        </div>
+        <div class="lctas" style="margin-top:16px">
+          <a class="lbtn primary" href="../index.html">Open the full desk →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="lsection" id="research">
+      <div class="lwrap">
+        <div class="leyebrow">Built to be tested, not believed</div>
+        <h2 class="lh2">The pre-specified hypothesis, tested honestly.</h2>
+        <p class="lsub">Rift24's hypothesis was pre-specified and tested exactly as written, before any result was seen, on a frozen sample with an explicit in-sample / out-of-sample split. The result is reported as it came out.</p>
+        <div class="lverdict">
+          <div class="top"><span class="lab lab-obs">OBSERVED</span><span class="word" id="lverdict-word">Loading…</span></div>
+          <p class="hyp" id="lverdict-hyp">Loading hypothesis…</p>
+          <div class="tablewrap">
+            <table id="lmetrics">
+              <thead><tr><th>metric</th><th>A always-fade</th><th>Rift24</th></tr></thead>
+              <tbody id="lmetrics-body"></tbody>
+            </table>
+          </div>
+          <p class="lfoot-note">Beta ≈ 1 means the void move is already essentially fully priced by the time cash reopens — there is no over-shoot left to fade. A separate, clearly-labelled <span class="notval">exploratory, not backtest-validated</span> residual rule found on the same sample after this result is reported on the Backtest page — never as the headline.</p>
+          <p class="lfoot-note"><a href="../index.html#backtest">Full backtest, methodology &amp; baseline comparison →</a> · <a href="../thesis/">Read the full thesis →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lsection">
+      <div class="lwrap">
+        <div class="lgrid2">
+          <div class="lcard">
+            <h3>Who this is for</h3>
+            <p>Crypto-native Bitget retail / lower-VIP traders with roughly $3k–$25k capital who hold 2–10 liquid rTokens and sleep through the U.S. cash session — not a professional stat-arb desk.</p>
+          </div>
+          <div class="lcard">
+            <h3>What stops it from guessing</h3>
+            <ul>
+              <li>Cash market must be closed at decision time</li>
+              <li>Only allow-listed rTokens — no ad-hoc tickers</li>
+              <li>Move must exceed 2× round-trip cost</li>
+              <li>Costs and spread are priced in, never assumed away</li>
+              <li>Edge must be established from past sessions only, or it's <b>DO NOTHING</b></li>
+              <li>Stale data (&gt;15 min) forces <b>DO NOTHING</b> in live mode</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lsection">
+      <div class="lwrap">
+        <div class="leyebrow">Allow-listed rTokens</div>
+        <p class="lsub" style="margin-bottom:16px">The only instruments Rift24 will ever act on — verified against Bitget's public symbol list.</p>
+        <div class="ltickers" id="ltickers"></div>
+      </div>
+    </section>
+
+    <section class="lsection" id="replay">
+      <div class="lwrap">
+        <div class="leyebrow">Weekend replay</div>
+        <h2 class="lh2">Watch the rift unfold.</h2>
+        <p class="lsub">Step through a real weekend, bar by bar, exactly as Rift24 saw it — nothing about Monday's open is shown until you reach it.</p>
+        <div class="lreplaytl">
+          <div class="lrt-step"><span>FRI</span>Cash close</div>
+          <div class="lrt-arrow">→</div>
+          <div class="lrt-step"><span>·</span>Event</div>
+          <div class="lrt-arrow">→</div>
+          <div class="lrt-step"><span>·</span>rToken move</div>
+          <div class="lrt-arrow">→</div>
+          <div class="lrt-step accent"><span>·</span>Rift24 observes</div>
+          <div class="lrt-arrow">→</div>
+          <div class="lrt-step"><span>MON</span>Cash open</div>
+          <div class="lrt-arrow">→</div>
+          <div class="lrt-step"><span>·</span>Autopsy</div>
+        </div>
+        <div class="lctas" style="margin-top:18px">
+          <a class="lbtn primary" href="../index.html#replay">Open weekend replay →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="lsection">
+      <div class="lwrap">
+        <div class="leyebrow">Data integrity</div>
+        <h2 class="lh2">Every figure is labelled.</h2>
+        <div class="llegend">
+          <div class="item"><b class="lab lab-obs">OBSERVED</b><p>Read directly from exchange / cash-market data — Bitget 15-minute candles, Yahoo Finance daily bars.</p></div>
+          <div class="item"><b class="lab lab-est">ESTIMATED</b><p>Depends on a modelled assumption — costs, spread haircut, implied cash gap, net-of-cost returns.</p></div>
+          <div class="item"><b class="lab lab-tgt">TARGETED</b><p>A goal that is not yet built or measured — e.g. a live Bitget Signal feed, or a forward test of the exploratory rule.</p></div>
+        </div>
+        <p class="lsub" style="margin:16px 0 0">Built for the 24/7 tokenized market: Rift24 explores what becomes possible when tokenized U.S. equities keep trading beyond the traditional cash-market session, using Bitget's rTokens as the observable.</p>
+      </div>
+    </section>
+
+    <section class="lsection lfinal">
+      <div class="lwrap">
+        <h2 class="lh2" style="font-size:clamp(24px,4vw,38px);margin-bottom:10px">Price the void.</h2>
+        <p class="lsub" style="margin-bottom:22px">See what the 24/7 market has already priced.</p>
+        <div class="lctas">
+          <a class="lbtn primary" href="../index.html">Enter Rift24 →</a>
+          <a class="lbtn ghost" href="#research">View research</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lfoot">
+    <div class="lwrap">
+      <div class="lfoot-top">
+        <div class="lfoot-brand">
+          <span class="wordmark"><span class="rf">Rift</span><span class="yr">24</span></span>
+          <p>After-hours information pricing for 24/7 tokenized markets.</p>
+        </div>
+        <span class="links">
+          <a href="../index.html">Desk</a>
+          <a href="../index.html#backtest">Backtest</a>
+          <a href="../index.html#replay">Weekend replay</a>
+          <a href="../thesis/">Research</a>
+        </span>
+      </div>
+      <span class="bitget">Built for <b>Bitget</b> — Alpha Factory · After-Hours Information Pricing. Paper / backtest only. No live-money trading.</span>
+    </div>
+  </footer>
+
+  <script src="../demo_state.js"></script>
+  <script src="landing.js"></script>
+</body>
+</html>

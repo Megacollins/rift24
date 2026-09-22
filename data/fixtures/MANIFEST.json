@@ -1,0 +1,230 @@
+{
+  "fetched_at_utc": "2026-09-21T21:31:52.338010+00:00",
+  "granularity": "15min",
+  "rtoken": {
+    "RNVDAUSDT": {
+      "rows": 9771,
+      "first": "2026-06-01T00:00:00+00:00",
+      "last": "2026-09-21T21:15:00+00:00"
+    },
+    "RTSLAUSDT": {
+      "rows": 8875,
+      "first": "2026-06-01T00:00:00+00:00",
+      "last": "2026-09-21T21:15:00+00:00"
+    },
+    "RQQQUSDT": {
+      "rows": 8642,
+      "first": "2026-06-01T00:00:00+00:00",
+      "last": "2026-09-21T21:15:00+00:00"
+    },
+    "RSPYUSDT": {
+      "rows": 7747,
+      "first": "2026-06-01T00:00:00+00:00",
+      "last": "2026-09-21T21:15:00+00:00"
+    },
+    "RMETAUSDT": {
+      "rows": 8058,
+      "first": "2026-06-01T00:00:00+00:00",
+      "last": "2026-09-21T21:15:00+00:00"
+    },
+    "RAAPLUSDT": {
+      "rows": 8377,
+      "first": "2026-06-01T00:00:00+00:00",
+      "last": "2026-09-21T21:15:00+00:00"
+    },
+    "RMSFTUSDT": {
+      "rows": 8004,
+      "first": "2026-06-01T00:00:00+00:00",
+      "last": "2026-09-21T21:15:00+00:00"
+    },
+    "RAMZNUSDT": {
+      "rows": 7826,
+      "first": "2026-06-01T00:00:00+00:00",
+      "last": "2026-09-21T21:15:00+00:00"
+    },
+    "RGOOGLUSDT": {
+      "rows": 8555,
+      "first": "2026-06-01T00:00:00+00:00",
+      "last": "2026-09-21T21:15:00+00:00"
+    },
+    "RAMDUSDT": {
+      "rows": 8038,
+      "first": "2026-06-01T00:00:00+00:00",
+      "last": "2026-09-21T21:15:00+00:00"
+    }
+  },
+  "cash": {
+    "NVDA": {
+      "rows": 83,
+      "corporate_events": {
+        "dividends": [
+          {
+            "amount": 0.25,
+            "date": 1780579800
+          },
+          {
+            "amount": 0.25,
+            "date": 1789047000
+          }
+        ]
+      }
+    },
+    "TSLA": {
+      "rows": 83,
+      "corporate_events": {}
+    },
+    "QQQ": {
+      "rows": 83,
+      "corporate_events": {
+        "dividends": [
+          {
+            "amount": 0.813,
+            "date": 1782135000
+          }
+        ]
+      }
+    },
+    "SPY": {
+      "rows": 83,
+      "corporate_events": {
+        "dividends": [
+          {
+            "amount": 1.904,
+            "date": 1781789400
+          },
+          {
+            "amount": 1.889,
+            "date": 1789738200
+          }
+        ]
+      }
+    },
+    "META": {
+      "rows": 83,
+      "corporate_events": {
+        "dividends": [
+          {
+            "amount": 0.525,
+            "date": 1781530200
+          }
+        ]
+      }
+    },
+    "AAPL": {
+      "rows": 83,
+      "corporate_events": {
+        "dividends": [
+          {
+            "amount": 0.27,
+            "date": 1786368600
+          }
+        ]
+      }
+    },
+    "MSFT": {
+      "rows": 83,
+      "corporate_events": {
+        "dividends": [
+          {
+            "amount": 0.91,
+            "date": 1779370200
+          },
+          {
+            "amount": 0.91,
+            "date": 1787232600
+          }
+        ]
+      }
+    },
+    "AMZN": {
+      "rows": 83,
+      "corporate_events": {}
+    },
+    "GOOGL": {
+      "rows": 83,
+      "corporate_events": {
+        "dividends": [
+          {
+            "amount": 0.22,
+            "date": 1780925400
+          },
+          {
+            "amount": 0.22,
+            "date": 1788528600
+          }
+        ]
+      }
+    },
+    "AMD": {
+      "rows": 83,
+      "corporate_events": {}
+    }
+  },
+  "spread_snapshot": {
+    "RNVDAUSDT": {
+      "ts_ms": 1790027026344,
+      "bid": 226.96,
+      "ask": 227.02,
+      "spread_bps": 2.643
+    },
+    "RTSLAUSDT": {
+      "ts_ms": 1790027027550,
+      "bid": 374.92,
+      "ask": 374.95,
+      "spread_bps": 0.8
+    },
+    "RQQQUSDT": {
+      "ts_ms": 1790027028781,
+      "bid": 741.27,
+      "ask": 741.39,
+      "spread_bps": 1.619
+    },
+    "RSPYUSDT": {
+      "ts_ms": 1790027029983,
+      "bid": 773.36,
+      "ask": 773.48,
+      "spread_bps": 1.552
+    },
+    "RMETAUSDT": {
+      "ts_ms": 1790027030888,
+      "bid": 740.2,
+      "ask": 740.5,
+      "spread_bps": 4.052
+    },
+    "RAAPLUSDT": {
+      "ts_ms": 1790027032763,
+      "bid": 338.67,
+      "ask": 338.72,
+      "spread_bps": 1.476
+    },
+    "RMSFTUSDT": {
+      "ts_ms": 1790027033650,
+      "bid": 501.27,
+      "ask": 501.35,
+      "spread_bps": 1.596
+    },
+    "RAMZNUSDT": {
+      "ts_ms": 1790027035432,
+      "bid": 258.75,
+      "ask": 258.86,
+      "spread_bps": 4.25
+    },
+    "RGOOGLUSDT": {
+      "ts_ms": 1790027036040,
+      "bid": 355.84,
+      "ask": 355.9,
+      "spread_bps": 1.686
+    },
+    "RAMDUSDT": {
+      "ts_ms": 1790027037547,
+      "bid": 615.9,
+      "ask": 616.0,
+      "spread_bps": 1.624
+    }
+  },
+  "sources": {
+    "rtoken": "Bitget spot REST /api/v2/spot/market/history-candles (public, no key)",
+    "cash": "Yahoo Finance chart API interval=1d (raw, unadjusted open/close)",
+    "spread": "Bitget spot REST /api/v2/spot/market/tickers bidPr/askPr - single snapshot at fetch time, NOT historical"
+  }
+}

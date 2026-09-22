@@ -1,0 +1,8 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+reports/live_smoke/
+.ipynb_checkpoints/
+
+.vercel
+.env*
